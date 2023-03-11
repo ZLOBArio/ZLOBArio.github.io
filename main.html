@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table width="100%" border="1" cellpadding="4" cellspacing="0">
+        <tr>
+            <td colspan="2" align="center"> <a href="https://www.gsu.by/" onclick="openInMainFile(event)"><img
+                        src="C:\Users\ZLOBA\OneDrive\Рабочий стол\Laba02/unnamed.jpg" width="300" height="300"
+                        alt=" Логотип ГГУ им. Франциско Скарыны">
+                    <figcaption>Логотип</figcaption>
+                </a>
+            </td>
+            <td colspan="2" align="center"><a href="biography.html" onclick="openInMainFile(event)">
+                    <p>Качанов Александр Юрьевич</p>
+                </a></td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">Панель навигации</td>
+
+        </tr>
+        <tr>
+            <td id="main-file" colspan="4" align="center">Основной документ</td>
+        </tr>
+        <tr>
+            <td align="center" valign="top"><a href="C:\Users\ZLOBA\OneDrive\Рабочий стол\Laba02/ффит.html"
+                    onclick="openInMainFile(event)"><img width="250" height="250"
+                        src="C:\Users\ZLOBA\OneDrive\Рабочий стол\Laba02/icons-depart-08-physics.png"
+                        alt="Логотип ФФИТ"></a></td>
+            <td align="center" valign="top"><a href="/расписание экз и зач.html"><img width="230" height="230"
+                        src="C:\Users\ZLOBA\OneDrive\Рабочий стол\Laba02/kartinka-k-raspisaniyu.png"
+                        alt="Расписание экзаменов и зачётов"></a></td>
+            <td>Моя группа</td>
+            <td>Фото расписания занятий</td>
+        </tr>
+    </table>
+    <script>
+        function openInMainFile(event) {
+            event.preventDefault();
+            var url = event.target.href;
+            var mainFile = document.getElementById("main-file");
+            mainFile.innerHTML = "<iframe src='" + url + "'></iframe>";
+        }
+    </script>
+</body>
+
+</html>
